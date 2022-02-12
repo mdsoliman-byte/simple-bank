@@ -3,4 +3,7 @@ document
   .addEventListener("click", function () {
     const depositInput = document.getElementById("deposit-input").value;
     document.getElementById("deposit-fild").innerText = depositInput;
+    // Clear input 
+
+    document.getElementById("deposit-input").value= " ";
   });
