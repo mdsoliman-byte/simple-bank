@@ -15,25 +15,25 @@ const privousBalance = parseFloat(document.getElementById('balance-fild').innerT
 const updateBalance =  depositInput + privousBalance;
 console.log(updateBalance);
 document.getElementById('balance-fild').innerText = updateBalance;
-// Update Withdrawal Ammount
-// console.log(depositInput);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // Clear input 
 
     document.getElementById("deposit-input").value= " ";
   });
+// Update Withdrawal Ammount
+
+
+document.getElementById('withdrawal-button').addEventListener('click' , function(){
+    const withdrawalAmmount = parseFloat(document.getElementById('withdrawal-fild').innerText);
+const withdrawalFild = parseFloat(document.getElementById('withdrawal-input').value);
+const newWithdraw = withdrawalAmmount + withdrawalFild;
+document.getElementById('withdrawal-fild').innerText = newWithdraw;
+// Update Balance 
+const privousBalance = parseFloat(document.getElementById('balance-fild').innerText);
+const newBalance = privousBalance - withdrawalFild ;
+
+document.getElementById('balance-fild').innerText = newBalance;
+// Clear Fild 
+document.getElementById('withdrawal-input').value = " ";
+
+
+})
